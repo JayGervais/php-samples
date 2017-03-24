@@ -1,0 +1,102 @@
+<?php 
+// variable name
+$document_root = $_SERVER['DOCUMENT_ROOT'];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Results</title>
+<style>
+table, th, td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 6px;
+}
+th {
+	background: #ccccff;
+}
+</style>
+
+</head>
+<body>
+	<h1>Bob's Auto Parts</h1>
+	<h2>Customer Orders</h2>
+<?php 
+// Read entire file
+// Make each order element in array
+$orders = file("document_root/../orders/orders/txt");
+
+// count # of orders in array
+$number_of_orders = count($orders);
+
+if ($number_of_orders == 0) {
+	echo "<p><strong>No orders pending.<br />Please try again later.</strong></p>";
+}
+
+echo "<table>\n";
+echo "<tr>
+<th>Order Date</th>
+<th>Tires</th>
+<th>Oil</th>
+<th>Spark Plugs</th>
+<th>Total</th>
+<th>Address</th>
+</tr>";
+
+for ($i=0; $i<$number_of_orders; $i++) {
+	//split each line
+	$line = explode("\t", $orders[$i]);
+	// keep only #'s ordered
+	$line[1] = intval($line[1]);
+	$line[2] = intval($line[2]);
+	$line[3] = intval($line[3]);
+
+	//output each order
+	echo "<tr>
+	<td>".$line[0]."</td>
+	<td style=\"text-align: right;\">".$line[1]."</td>
+	<td style=\"text-align: right;\">".$line[2]."</td>
+	<td style=\"text-align: right;\">".$line[3]."</td>
+	<td style=\"text-align: right;\">".$line[4]."</td>
+	<td>".$line[5]."</td>
+	</tr>";
+}
+echo "</table>";
+
+?>
+
+
+
+
+
+<?php
+/*
+$orders = file("$document_root/../orders/orders.txt");
+
+$number_of_orders = count($orders);
+if ($number_of_orders == 0) {
+	echo "<p>No goddamn orders.<br />
+	You goddamn fool.</p>";
+}
+for ($i = 0; $i < $number_of_orders; $i++) {
+	echo $orders[$i]."<br />";
+} */
+
+/* @$fp = fopen("$document_root/../orders/orders.txt", 'rb');
+flock($fp, LOCK_SH); // lock file for reading
+
+if (!$fp) {
+	echo "<p><strong>No orders pending.<br />
+	Please try again later.</p></strong>";
+	exit;
+} while (!feof($fp)) {
+	$order = fgets($fp);
+	echo htmlspecialchars($order)."<br />";
+}
+flock($fp, LOCK_UN); // release read lock
+fclose($fp); */
+?>
+
+
+</body>
+</html>

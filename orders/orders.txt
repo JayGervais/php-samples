@@ -1,0 +1,8 @@
+04:07, 354 March 2017	1 tires 	2 oil	3 spark plugs	$138.6	3efds
+04:08, 326 March 2017	 tires 	 oil	 spark plugs	$0	
+04:10, 334 March 2017	2 tires 	3 oil	6 spark plugs	$266.7	6 Harper Drive, SW Nova Scotia
+04:15, 349 March 2017	4 tires 	2 oil	17 spark plugs	$512.4	113 Crawford Street Bro Place
+04:17, 302 March 2017	4 tires 	2 oil	17 spark plugs	$512.4	113 Crawford Street Bro Place
+03:34, 706 March 2017	2 tires 	6 oil	3 spark plugs	$285.6	1640 20 Ave NW
+04:20, 729 March 2017	 tires 	 oil	 spark plugs	$0	
+04:59, 950 March 2017	3 tires 	3 oil	5 spark plugs	$367.5	1234 Avenue

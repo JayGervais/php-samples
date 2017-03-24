@@ -1,0 +1,626 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+
+}
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Modal (background) 2 */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+}
+/* The Close Button */
+.close2 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Modal (background) 3 */
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content3 {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+}
+
+/* The Close Button */
+.close3 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Center the loader 
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+} 
+
+#myDiv {
+  display: none;
+}
+
+@media all and (min-width: 750px) {
+.btn.btn-info {
+ background-color: #017a6c;
+ border: 2px solid #017a6c;
+ color: white;
+ font-size: 1.2em;
+ }
+body {
+  padding-top: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 1;
+  transition: 5s opacity;
+}
+body.fade-out {
+	opacity: 0;
+	transition: none;
+}
+ul.nav {
+	float: right;
+}
+p.headtext {
+	font-size: 1.3em;
+}
+#banner {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	cursor: default;
+	height: 95vh;
+	min-height: 35em;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-image: url('../img/banner.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.home_page {
+	color: white;
+}
+.home_page h1 {
+	font-weight: bolder;
+	font-size: 4.5em;
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+.about {
+  padding: 40px 15px;
+  font-size: 1.5em;
+  background-color: #017a6c;
+  color: white;
+}
+.about-inner {
+	max-width: 750px;
+	margin: 0 auto;
+}
+.aboutContent {
+	padding: 40px;
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+}
+.services {
+  padding: 40px 15px;
+  font-size: 1.5em;
+  color: black;
+}
+.services-inner {
+
+}
+#content-1 {
+	max-width: 355px;
+	float:left;
+	display: block;
+	padding-right: 15px;
+}
+#content-2 {
+	max-width: 355px;
+	float:left;
+	padding-top: 0px;
+}
+.samples {
+	background-color: #017a6c;
+	overflow: hidden;
+	clear:both;
+	padding-bottom: 25px;
+}
+.samples-inner {
+	padding: 40px 15px;
+  	font-size: 1.5em;
+ 	color: white;
+  	max-width: 1200px;
+	clear:both;
+	margin: 0 auto;
+} 
+.container {
+	max-width: 750px;
+	margin: 0 auto;
+}
+.container-fluid {
+	max-width: 100%;
+	margin: 0 auto;
+}
+.contact {
+	padding: 40px 15px;
+  	font-size: 1.5em;
+  	max-width: 750px;
+	margin: 0 auto;
+	clear:both;
+} 
+li.sample {
+	text-decoration: none;
+	color: white;
+}
+li.sample a {
+	text-decoration: none;
+	color: white;
+}
+li.sample a:hover {
+	color: #21ff88;
+	text-decoration: none;
+}
+.row {
+	float: none;
+    margin: 0 auto;	
+}
+.col-xs-4 {
+	width: 50%;
+	padding: 20px;
+	float:left;
+	margin: 0 auto;
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+	height: 520px;
+	overflow: hidden;
+}
+
+.btn-success {
+	width:70%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+.btn-success:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+#myBtn {
+	width:70%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+#myBtn:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+#myBtn2 {
+	width:70%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+#myBtn2:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+#myBtn3 {
+	width:70%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+#myBtn3:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 30px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: black;
+}
+p.text-muted {
+	margin-top: 10px;
+	text-align: center;
+}
+input {
+    width: 100%;
+}
+textarea {
+	width: 100%;
+}
+}
+/* ------------------------------------------ */
+
+@media all and (max-width: 750px) {
+/* CSS rules here for screens lower than 750px */
+.btn.btn-info {
+ background-color: #017a6c;
+ border: 2px solid #017a6c;
+ color: white;
+ font-size: 1em;
+ }
+body {
+  padding-top: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 1;
+  transition: 5s opacity;
+}
+body.fade-out {
+	opacity: 0;
+	transition: none;
+}
+ul.nav {
+	float: right;
+}
+#banner {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	cursor: default;
+	height: 95vh;
+	min-height: 35em;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-image: url('../img/banner.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	}
+.home_page {
+	color: white;
+	}
+.home_page h1 {
+	font-weight: bolder;
+	font-size: 3.5em;
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+.about {
+  padding: 40px 15px;
+  font-size: 1.5em;
+  background-color: #017a6c;
+  color: white;
+}
+.about-inner {
+	max-width: 750px;
+	margin: 0 auto;
+}
+.aboutContent {
+	padding: 20px;
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+}
+.services {
+  padding: 40px 15px;
+  font-size: 1.5em;
+  color: black;
+}
+.services-inner {
+	max-width: 750px;
+	margin: 0 auto;
+}
+#content-1 {
+	width: 100%;
+	float:left;
+	display: block;
+	padding-right: 15px;
+}
+#content-2 {
+	width: 100%;
+	float:left;
+	padding-top: 0px;
+}
+.samples {
+	background-color: #017a6c;
+	overflow: hidden;
+	clear:both;
+	padding-bottom: 25px;
+}
+.samples-inner {
+	padding: 40px 15px;
+  	font-size: 1.5em;
+ 	color: white;
+  	max-width: 100%;
+	clear:both;
+	margin: 0 auto;
+	
+} 
+.contact {
+	padding: 40px 15px;
+  	font-size: 1.5em;
+  	max-width: 750px;
+	margin: 0 auto;
+	clear:both;
+} 
+li.sample {
+	text-decoration: none;
+	color: white;
+}
+li.sample a {
+	text-decoration: none;
+	color: white;
+}
+li.sample a:hover {
+	color: #21ff88;;
+	text-decoration: none;
+}
+.col-xs-4 {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+}
+.btn-success {
+	width:100%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+.btn-success:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+#myBtn {
+	width:100%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+#myBtn:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+#myBtn2 {
+	width:100%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+#myBtn2:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+#myBtn3 {
+	width:100%;
+	font-size: 1em;
+	background-color: #017a6c;
+	border: 1px solid white;
+}
+#myBtn3:hover {
+	background-color: #014c43;
+	color: white;
+	border: 1px solid white;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 30px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: black;
+}
+p.text-muted {
+	margin-top: 10px;
+	text-align: center;
+}
+input {
+    width: 100%;
+}
+textarea {
+	width: 100%;
+}
+}
+
+@media all and (min-width: 1224px) { 
+
+.col-xs-4 {
+	width: 50%;
+	padding: 20px;
+	float:left;
+	margin: 0 auto;
+	border: 1px solid #029786;
+	-webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.7);
+	background-color: #017e70;
+	height: 500px;
+	overflow: hidden;
+}
+
+}
+
+
+
+
